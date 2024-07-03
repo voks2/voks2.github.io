@@ -233,8 +233,16 @@ body {
 
   }
 
+  .intro {
+    font-size: 1.1em;
+  }
+
   .other {
-    gap: 30px;
+    gap: 18px;
+  }
+
+  .arrow {
+    margin-right: 0.6em;
   }
 
 
