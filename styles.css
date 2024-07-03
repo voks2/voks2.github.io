@@ -247,6 +247,10 @@ body {
 
   }
 
+  .bottom {
+    height: 150%;
+  }
+
 
   .section {
     display: flex;
