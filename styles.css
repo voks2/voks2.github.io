@@ -67,8 +67,10 @@ body {
   .logo {
     position: absolute;
     top: 20%;
-    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid var(--text-color);
     font-size: 1.4rem;
+    color: var(--accent-color)
       
   }
 
@@ -195,7 +197,7 @@ body {
   width: 12rem;
   height: 18rem;
   
-  margin-left: 20px;
+  margin-left: 30px;
 
   overflow: hidden;
   /* border: 3px red solid; */
@@ -210,7 +212,21 @@ body {
 }
 
 
+footer {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
+.copy {
+  position: absolute;
+  bottom: 20%;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--accent-color);
+  
+}
 
 @media (max-width: 768px ){
 
