@@ -4,6 +4,15 @@
   --secondary-color: #f0f0f0;
 }
 
+#maintan {
+  position: fixed;
+  z-index: 3;
+  top:0;
+  background-color: #EF4136;
+  height: 100%;
+  width: 100%;
+}
+
 
 html {
   font-family: 'DM Sans', sans-serif;
@@ -16,7 +25,8 @@ html {
 body {
   margin: 0;
   padding: 50px;
-  background-color: var(--secondary-color)
+  background-color: var(--secondary-color);
+  
 }
 
 #container {
