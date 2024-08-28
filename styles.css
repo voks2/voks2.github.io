@@ -181,8 +181,8 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 150px;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
 
     align-items: flex-start;
   }
@@ -190,6 +190,7 @@ body {
   .section-title {
     margin-bottom: 30px;
     color: gray;
+    font-size: 1.1rem;
   }
 
   .section-text {
@@ -278,6 +279,8 @@ footer {
     flex-direction: column;
     margin-bottom: 70px;
   }
+
+
 
 
   .profile-pic-container {
