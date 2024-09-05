@@ -82,9 +82,14 @@ body {
 
 /* 1 Column on Mobile */
 @media (max-width: 599px) {
+  .container {
+    padding: 1.5rem;  
+  }
+  
   .column {
     flex: 1 1 100%; /* 1 column full width */
   }
+
 }
 
 
@@ -95,12 +100,15 @@ body {
   
 }
 
+
+
 p, .item {
   margin-bottom: 30px;
 }
 
 .title, .item-title {
   color: var(--primary-color);
+  
 }
 
 
@@ -126,7 +134,8 @@ p, .item {
 
   
   .arrow {
-   padding-left: 15px;
+   padding-left: 20px;
+   color: var(--text-color);
   }
 
   
