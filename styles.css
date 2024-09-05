@@ -16,134 +16,104 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   letter-spacing: -0.2px;
-  line-height: normal;
+  line-height: 28px;
   color: var(--text-color);
-  
 }
 
 
 body {
   width: 100%; /* 100% of the viewport width */
-  
   overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-#container {
-  
   background-color: var(--background-color);
-  width: 100%;
-  min-height:100vh;
+
+
+}
+
+/* ---------- RESPONSIVE LAYOUT-----------------  */
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line */
+  justify-content: space-between;
+  max-width: 100%; /* Full width for small screens */
+  margin: 0 auto;  /* Centering the container */
+  padding: 2.5rem; /* Add some padding around */
+  gap: 2.5rem;
+}
+
+/* Column Styling */
+.column {
+  
+  flex: 1 1 calc(25% - 2.5rem);
+  margin-bottom: 1rem;
+  
   /* border: 1px solid red; */
-  margin: auto;
+}
+
+/* 4 Columns on Large Screens (Desktops) */
+@media (min-width: 1200px) {
+  .container {
+     /*max-width: 1200px;  Set max width for large screens */
+  }
+  .column {
+    flex: 1 1 23%; /* 23% width for each column, 4 columns with gaps */
+  }
+}
+
+/* 3 Columns on Tablets */
+@media (min-width: 800px) and (max-width: 1199px) {
+  .column {
+    flex: 1 1 30%; /* 3 columns on tablet-sized screens */
+  }
+  .container {
+     /* max-width: 1000px; Optional max width for tablets */
+  }
+}
+
+/* 2 Columns on Smaller Tablets or Landscape Phones */
+@media (min-width: 600px) and (max-width: 799px) {
+  .column {
+    flex: 1 1 45%; /* 2 columns with space between */
+  }
+  .container {
+     /* max-width: 800px; Optional, can center the content */
+  }
+}
+
+/* 1 Column on Mobile */
+@media (max-width: 599px) {
+  .column {
+    flex: 1 1 100%; /* 1 column full width */
+  }
+}
+
+
+/* -------------- DETAILS -------------------- */
+
+.column-title {
+  padding-bottom: 30px;
   
 }
 
-.section {
-  display: flex;
-  flex-direction: row;
+p, .item {
+  margin-bottom: 30px;
 }
 
-
-.title-box, .content-box {
-  width: 50%;
-  padding-bottom: 100px;
-}
-
-
-/* ---------------- LEFT SIDE  -----------------------*/ 
-
-.title-box {
-  display: flex;
-  justify-content:flex-end;
-}
-
-.title-sub-box {
-  width: 300px;
-  /* border: 1px solid green; */
-}
-
-.title {
-  border-bottom: 0.5px solid var(--line-color);
+.title, .item-title {
   color: var(--primary-color);
-  padding-bottom: 10px;
-} 
-
-.subtitle {
-  padding-top: 10px;
-  padding-right: 40px;
 }
-
-
-/* ---------------- RIGHT SIDE -----------------------*/ 
-
-
-.content-box {
-  border-left: 0.5px solid var(--line-color);
-  max-width: 500px;
-  padding-top: 40px;
-  padding-left: 30px;
-}
-
-
-.item {
-  padding-bottom: 22px;
-}
-
-.item-title {
-  color: var(--primary-color);
-  padding-bottom: 2px;
-  font-size: 1rem;
-}
-
-.subtitle, .content-box, .item-desc {
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-}
-
-p {
-  padding-bottom: 26px;
-}
-
-.item ul  {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.item-title a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-
-/* ---------------- MAIN SECTION SPECIALS-----------------------*/ 
-
-#main .title-box {
-  padding-top: 280px;
-  padding-bottom: 240px;
-}
-#main .content-box   {
-  padding-top: 310px;
-  padding-bottom: 240px;
-}
-#main .title {
-  border: none;
-  padding-bottom: 0px;
-}
-
 
 
 
 /* ---------------EXTRAS ------------------ */
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
 
-
+  ul {
+    list-style-type: none;
+  }
 
   .other-link {
     text-decoration: none;
@@ -154,32 +124,12 @@ a:hover {
   }
 
 
+  
   .arrow {
-    width: 0.75em; /* Size of the square (1.2 * 0.6em ≈ 0.75em) */
-    height: 0.75em;
-    border-top: 1.5px solid currentColor; /* Top border */
-    border-right: 1.5px solid currentColor; /* Right border */
-    border-color: #a09e9e;
-    position: relative;
-    top:4px;
-    margin-right: 0.8em;
-    box-sizing: border-box;
+   padding-left: 15px;
   }
 
-  .arrow::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: calc(100% + 5px);
-    height: 1px;
-    background-color: #a09e9e;
-    transform: rotate(-45deg); /* Rotate to create the diagonal line */
-    transform-origin: bottom left;
-    box-sizing: border-box;
-  }
-
-
+  
 
 .profile-pic-container {
   width: 12rem;
@@ -218,64 +168,7 @@ footer {
 
 /* -------------------------------------------- MOBILE VIEW  ---------------------------------------*/
 
-@media (max-width: 768px ){
 
-  #container {
-    padding-left: 20px;
-  }
-
-  .section {
-    display: flex;
-    flex-direction: column;
-    
-  }
-
-  .title-box {
-    width: 100%;
-    padding-bottom: 0px;
-    justify-content: left;
-    flex-grow: 2;
-    padding-left: 0px;
-    margin-left: 0;
-  }
-
-  .title-sub-box {
-    padding: 0;
-    width: 100%;
-  }
-
-
-  .title {
-    border-left: 0.5px solid var(--line-color);
-    padding-left: 20px;
-    padding-bottom: 30px;
-    width: 100%;
-  }
-
-  .content-box {
-    width: 100%;
-    padding-bottom: 150px;
-    padding-right: 30px;
-    padding-left: 20px;
-  }
-
-
-
-  /* ---------------- MAIN SECTION SPECIALS mobile -----------------*/ 
-
-  #main .title-box {
-    padding-top: 200px;
-    padding-bottom: 50px;
-    border-left: 0.5px solid var(--line-color);
-    padding-left: 20px;
-  }
-  #main .content-box   {
-    padding-top: 0px;
-    padding-bottom: 240px;
-  }
-  #main .title {
-    padding-left: 0px;
-  }
 
 
 
@@ -302,7 +195,7 @@ footer {
   }
 
 
-}
+
 
 
 
