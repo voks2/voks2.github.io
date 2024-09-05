@@ -1,4 +1,5 @@
 //
+/*
 
 function createLines(container, numLines) {
     const containerHeight = container.scrollHeight;
@@ -30,7 +31,7 @@ function createLines(container, numLines) {
 
 
 
-/*
+
 //
 
 */
