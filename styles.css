@@ -221,7 +221,7 @@ footer {
 @media (max-width: 768px ){
 
   #container {
-    padding-left: 30px;
+    padding-left: 20px;
   }
 
   .section {
@@ -235,7 +235,8 @@ footer {
     padding-bottom: 0px;
     justify-content: left;
     flex-grow: 2;
-
+    padding-left: 0px;
+    margin-left: 0;
   }
 
   .title-sub-box {
@@ -246,7 +247,7 @@ footer {
 
   .title {
     border-left: 0.5px solid var(--line-color);
-    padding-left: 30px;
+    padding-left: 20px;
     padding-bottom: 30px;
     width: 100%;
   }
@@ -254,6 +255,8 @@ footer {
   .content-box {
     width: 100%;
     padding-bottom: 150px;
+    padding-right: 30px;
+    padding-left: 20px;
   }
 
 
@@ -262,9 +265,9 @@ footer {
 
   #main .title-box {
     padding-top: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     border-left: 0.5px solid var(--line-color);
-    padding-left: 30px;
+    padding-left: 20px;
   }
   #main .content-box   {
     padding-top: 0px;
