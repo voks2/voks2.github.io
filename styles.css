@@ -2,7 +2,7 @@
   --background-color: #0D0D0D; /* Primary text color */
   --primary-color: #EEEEEE;
   --text-color: #919191; /* Accent color for highlights */
-  --line-color: #353535;
+  --line-color: #535353;
 }
 
 * {
@@ -32,75 +32,65 @@ body {
 /* ---------- RESPONSIVE LAYOUT-----------------  */
 
 .container {
-  display: flex;
-  flex-wrap: wrap; /* Allows wrapping to the next line */
-  justify-content: space-between;
-  max-width: 100%; /* Full width for small screens */
-  margin: 0 auto;  /* Centering the container */
-  padding: 2.5rem; /* Add some padding around */
-  gap: 2.5rem;
+  column-count: 4; /* Default to 4 columns */
+  column-gap: 3rem; /* Gap between columns */
+  padding: 3rem;
 }
 
-/* Column Styling */
 .column {
   
-  flex: 1 1 calc(25% - 2.5rem);
-  margin-bottom: 1rem;
-  
   /* border: 1px solid red; */
+  margin-bottom: 4rem;
+  break-inside: avoid; /* Prevent breaking items across columns */
 }
 
-/* 4 Columns on Large Screens (Desktops) */
-@media (min-width: 1200px) {
+/* Media Queries for Responsive Layout */
+@media (max-width: 1200px) {
   .container {
-     /*max-width: 1200px;  Set max width for large screens */
-  }
-  .column {
-    flex: 1 1 23%; /* 23% width for each column, 4 columns with gaps */
-  }
-}
-
-/* 3 Columns on Tablets */
-@media (min-width: 800px) and (max-width: 1199px) {
-  .column {
-    flex: 1 1 30%; /* 3 columns on tablet-sized screens */
-  }
-  .container {
-     /* max-width: 1000px; Optional max width for tablets */
+    column-count: 3; /* 3 columns on medium screens */
   }
 }
 
-/* 2 Columns on Smaller Tablets or Landscape Phones */
-@media (min-width: 600px) and (max-width: 799px) {
-  .column {
-    flex: 1 1 45%; /* 2 columns with space between */
-  }
+@media (max-width: 800px) {
   .container {
-     /* max-width: 800px; Optional, can center the content */
+    column-count: 2; /* 2 columns on smaller screens */
   }
 }
 
-/* 1 Column on Mobile */
-@media (max-width: 599px) {
+@media (max-width: 600px) {
   .container {
-    padding: 1.5rem;  
+    column-count: 1; /* 1 column on mobile */
+    padding: 4rem 1rem;
   }
-  
-  .column {
-    flex: 1 1 100%; /* 1 column full width */
-  }
-
 }
 
 
 /* -------------- DETAILS -------------------- */
 
 .column-title {
+  position: relative;
   padding-bottom: 30px;
-  
+  /* border: 1px green solid; */
 }
 
+.title {
+  overflow: hidden;
+}
 
+.title::after {
+  content: "";
+  display: inline-block;
+  height: 0.2rem;
+  vertical-align:middle;
+  width: 100%;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid var(--line-color);
+}
+
+.vojin::after {
+  border: 0;
+}
 
 p, .item {
   margin-bottom: 30px;
