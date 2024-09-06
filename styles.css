@@ -40,8 +40,12 @@ body {
 .column {
   
   /* border: 1px solid red; */
-  margin-bottom: 4rem;
+  
   break-inside: avoid; /* Prevent breaking items across columns */
+}
+
+.column-content {
+  padding-bottom: 4rem;
 }
 
 /* Media Queries for Responsive Layout */
@@ -88,7 +92,7 @@ body {
   border-top: 1px solid var(--line-color);
 }
 
-.vojin::after {
+.special::after {
   border: 0;
 }
 
@@ -96,17 +100,18 @@ p, .item {
   margin-bottom: 30px;
 }
 
-.title, .item-title {
+.title, .item-title, .item-title a, p a {
   color: var(--primary-color);
   
 }
 
 
 
+
 /* ---------------EXTRAS ------------------ */
   a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--text-color);
   }
 
   ul {
@@ -131,10 +136,10 @@ p, .item {
   
 
 .profile-pic-container {
-  width: 12rem;
-  height: 18rem;
+  width: 100px;
+  height: 100px;
   
-  margin-left: 30px;
+  
 
   overflow: hidden;
   /* border: 3px red solid; */
@@ -165,34 +170,7 @@ footer {
   
 }
 
-/* -------------------------------------------- MOBILE VIEW  ---------------------------------------*/
-
-
-
-
-
-
-
-
-
-  .profile-pic-container {
-    width: 100%;
-    height: 12rem;
-    
-    margin: 0;
-  
-    overflow: hidden;
-    /* border: 3px red solid; */
-  }
-  
-  .profile-pic {
-    width: 120%; /* Ensure the image covers the container */
-    height: 120%; /* Ensure the image covers the container */
-    object-fit:cover; /* Crop the image to fit the container */
-    object-position: -60px -110px; /* Center the image within the container */
-    /* You can change object-position to other values such as top, bottom, left, right */
-  }
-
+/* -------------------------------------------- MOBILE VIEW  --------------------------------------- */
 
 
 
