@@ -66,6 +66,18 @@ body {
     column-count: 1; /* 1 column on mobile */
     padding: 4rem 1rem;
   }
+
+  .title::after {
+    content: "";
+    display: inline-block;
+    height: 0.2rem;
+    vertical-align:middle;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 20px;
+    border-top: 1px solid var(--line-color);
+  }
+  
 }
 
 
@@ -81,16 +93,6 @@ body {
   overflow: hidden;
 }
 
-.title::after {
-  content: "";
-  display: inline-block;
-  height: 0.2rem;
-  vertical-align:middle;
-  width: 100%;
-  margin-right: -100%;
-  margin-left: 20px;
-  border-top: 1px solid var(--line-color);
-}
 
 .special::after {
   border: 0;
