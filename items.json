@@ -1,0 +1,20 @@
+[
+    {
+        "projectname": "QA Exercise 1", 
+        "projectdescription": "wow this is my awesome project",
+        "tags": ["UI", "Bug"],
+        "link": "items/item1.html"
+    },
+    {
+        "projectname": "QA Exercise 2", 
+        "projectdescription": "wow this is my awesome project",
+        "tags": ["UI", "Bug", "none"],
+        "link": "items/item1.html"
+    },
+    {
+        "projectname": "QA Exercise 3", 
+        "projectdescription": "wow this is my awesome project",
+        "tags": ["UI", "Bug", "wow", "damn"],
+        "link": "items/item1.html"
+    }
+]
