@@ -89,6 +89,11 @@ body {
   overflow: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto; /* Maintains aspect ratio */
+}
+
 .special::after {
   border: 0;
 }
