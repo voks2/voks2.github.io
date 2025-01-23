@@ -1,6 +1,6 @@
 :root {
-  --background-color: #0D0D0D; /* Primary text color */
-  --primary-color: #EEEEEE;
+  --background-color: #0d0d0d; /* Primary text color */
+  --primary-color: #eeeeee;
   --text-color: #919191; /* Accent color for highlights */
   --line-color: #535353;
 }
@@ -11,22 +11,18 @@
   box-sizing: border-box;
 }
 
-
 html {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   letter-spacing: -0.2px;
   line-height: 28px;
   color: var(--text-color);
 }
 
-
 body {
   width: 100%; /* 100% of the viewport width */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   background-color: var(--background-color);
-
-
 }
 
 /* ---------- RESPONSIVE LAYOUT-----------------  */
@@ -37,8 +33,6 @@ body {
   padding: 3rem;
   gap: 3rem; /* Larger gap between boxes */
 }
-
-
 
 /* Layout 1: 4 Columns */
 .layout-1 .box {
@@ -59,7 +53,7 @@ body {
   .container {
     flex-direction: column;
     gap: 1rem; /* Optional: Adjust gap for mobile */
-    padding: 3rem 1.5rem; 
+    padding: 3rem 1.5rem;
   }
 
   .box {
@@ -71,7 +65,7 @@ body {
     content: "";
     display: inline-block;
     height: 0.2rem;
-    vertical-align:middle;
+    vertical-align: middle;
     width: 100%;
     margin-right: -100%;
     margin-left: 20px;
@@ -79,10 +73,7 @@ body {
   }
 }
 
-
 /* -------------- DETAILS -------------------- */
-
-
 
 .box-title {
   position: relative;
@@ -98,55 +89,52 @@ body {
   overflow: hidden;
 }
 
-
 .special::after {
   border: 0;
 }
 
-p, .item {
+.special a {
+  color: var(--primary-color);
+}
+
+p,
+.item {
   margin-bottom: 30px;
 }
 
-.title, .item-title, .item-title a, p a {
+.title,
+.item-title,
+.item-title a,
+p a {
   color: var(--primary-color);
-  
 }
 
-
-
-
 /* ---------------EXTRAS ------------------ */
-  a {
-    text-decoration: none;
-    color: var(--text-color);
-  }
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
 
-  ul {
-    list-style-type: none;
-  }
+ul {
+  list-style-type: none;
+}
 
-  .other-link {
-    text-decoration: none;
-    color: var(--text-color);
-    
-    position: relative;
-    display: inline-flex;
-  }
+.other-link {
+  text-decoration: none;
+  color: var(--text-color);
 
+  position: relative;
+  display: inline-flex;
+}
 
-  
-  .arrow {
-   padding-left: 10px;
-   color: var(--text-color);
-  }
-
-  
+.arrow {
+  padding-left: 10px;
+  color: var(--text-color);
+}
 
 .profile-pic-container {
   width: 100px;
   height: 100px;
-  
-  
 
   overflow: hidden;
   /* border: 3px red solid; */
@@ -155,11 +143,10 @@ p, .item {
 .profile-pic {
   width: 120%; /* Ensure the image covers the container */
   height: 120%; /* Ensure the image covers the container */
-  object-fit:cover; /* Crop the image to fit the container */
+  object-fit: cover; /* Crop the image to fit the container */
   object-position: -60px; /* Center the image within the container */
   /* You can change object-position to other values such as top, bottom, left, right */
 }
-
 
 footer {
   height: 0px;
@@ -174,39 +161,33 @@ footer {
   font-weight: 500;
   font-size: 0.8rem;
   border-bottom: 1px solid var(--accent-color);
-  
 }
 
 /* -------------------------------------------- MOBILE VIEW  --------------------------------------- */
-  
-
 
 /* --------------------------------itemsi ---------------------------- */
 
 .item-tags-list {
   display: flex;
   flex-wrap: wrap;
-    
-  
 }
 
 .item-tags-list .tag {
-  padding:   2px 7px;
-  margin-right: 5px;;
-  margin-bottom: 5px;  
-    cursor: pointer;
-    border: 0.5px solid var(--line-color);
-
+  padding: 2px 7px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: 0.5px solid var(--line-color);
 }
 
 .item-tags-list .tag.active {
-    background-color: var(--text-color);
-    color: var(--primary-color)
+  background-color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .item-list .item {
   margin-bottom: 20px;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .item-list li {
@@ -214,6 +195,6 @@ footer {
 }
 
 .item-list .item-a:hover {
-    background-color: var(--line-color);
-    color: var(--primary-color);
+  background-color: var(--line-color);
+  color: var(--primary-color);
 }
